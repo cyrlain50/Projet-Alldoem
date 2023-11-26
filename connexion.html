@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 400px;
+      margin-top: 50px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #fff; /* Couleur de fond du formulaire */
+      transition: background-color 0.3s ease; /* Transition de couleur de survol */
+    }
+    .logo {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px; /* Espacement en dessous du logo */
+    }
+    .btn-connexion, .btn-inscrire {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    .btn-connexion:hover {
+      background-color: #dc3545; /* Couleur de survol des boutons */
+    }
+    .forgot-password {
+      text-align: right;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-center mb-4">
+    <img src="images/logo/logo.png" width="150" alt="Logo du site" class="logo">
+  </div>
+
+  <form id="loginForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Adresse mail</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Mot de passe</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="mb-3">
+      <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+    </div>
+    <button type="submit" class="btn btn-danger btn-connexion">Connexion</button>
+  </form>
+  <div class="text-center mt-3">
+    <button type="button" class="btn btn-link btn-inscrire" onclick="window.location.href='inscription.html'">S'inscrire</button>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    // Ajoutez votre logique de validation de formulaire ici
+    // Par exemple, empêchez la soumission du formulaire si la validation échoue
+    // event.preventDefault();
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
