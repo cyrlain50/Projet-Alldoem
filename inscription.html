@@ -1,81 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <style>
-    body {
-      background-color: #fff;
-    }
-    .container {
-      max-width: 400px;
-      margin-top: 50px;
-      border: 2px solid #ccc; /* Ajout de la bordure */
-      border-radius: 8px; /* Coins arrondis */
-      padding: 20px; /* Espacement interne */
-    }
-    .logo {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Centre le bouton et l'agrandit un peu */
-    .btn-inscrire {
-      width: 100%;
-      margin-top: 10px;
-      font-size: 1.2rem;
-    }
-  </style>
+  <meta charset="utf-8">
+  <title>Alldoem: Inscription</title>
+  <link rel="stylesheet" type="text/css" href="css/insciption.css">
 </head>
+
 <body>
+  <!-- Conteneur principal pour la page d'inscription -->
+  <div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
 
-<div class="container">
-  <div class="text-center mb-4">
-    <img src="images/logo/logo.png" alt="Alldoem" width="150" class="logo">
+      <!-- Fond de la page d'inscription -->
+      <div class="loginbackground box-background--white padding-top--64">
+        <div class="loginbackground-gridContainer">
+          <!-- Barre blanche en haut de la page -->
+          <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;"></div>
+          </div>
+          <!-- Ligne de séparation -->
+          <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Fond bleu à gauche -->
+          <div class="box-root flex-flex animationLeftRight" style="grid-area: 6 / start / auto / 2;">
+            <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Animation bleue à gauche -->
+          <div class="box-root flex-flex animationLeftRight" style="grid-area: 7 / start / auto / 4;">
+            <div class="box-root box-background--blue" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Fond gris à droite -->
+          <div class="box-root flex-flex animationLeftRight" style="grid-area: 8 / 4 / auto / 6;">
+            <div class="box-root box-background--gray100" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Fond cyan en haut à droite -->
+          <div class="box-root flex-flex animationRightLeft" style="grid-area: 2 / 15 / auto / end;">
+            <div class="box-root box-background--cyan200" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Animation bleue en haut à droite -->
+          <div class="box-root flex-flex animationRightLeft" style="grid-area: 3 / 14 / auto / end;">
+            <div class="box-root box-background--blue" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Fond gris en bas à droite -->
+          <div class="box-root flex-flex animationRightLeft" style="grid-area: 4 / 17 / auto / 20;">
+            <div class="box-root box-background--gray100" style="flex-grow: 1;"></div>
+          </div>
+          <!-- Ligne de séparation en bas à droite -->
+          <div class="box-root flex-flex animationRightLeft" style="grid-area: 5 / 14 / auto / 17;">
+            <div class="box-root box-divider--light-all-2" style="flex-grow: 1;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenu du formulaire d'inscription -->
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <!-- Titre du site avec un lien -->
+          <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Alldœm</a></h1>
+        </div>
+
+        <!-- Formulaire d'inscription -->
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">Inscrivez-vous pour créer un compte</span>
+              <form id="signup-form" action="#" method="post"    >
+                <!-- Champ du nom -->
+                <div class="field padding-bottom--24">
+                  <label for="firstname">Prénom</label>
+                  <input type="text" name="firstname" placeholder="Prénom"  required>
+                </div>
+                <!-- Champ du prénom -->
+                <div class="field padding-bottom--24">
+                  <label for="lastname">Nom</label>
+                  <input type="text" name="lastname" placeholder="Nom" required>
+                </div>
+                <!-- Champ de l'adresse e-mail -->
+                <div class="field padding-bottom--24">
+                  <label for="email">Identifient</label>
+                  <input type="email" name="email" placeholder="Adresse mail ou Numéro de téléphone" required>
+                </div>
+                <!-- Champ du mot de passe -->
+                <div class="field padding-bottom--24">
+                  <label for="password">Mot de passe</label>
+                  <input type="password" name="password" placeholder="Mot de passe" required>
+                </div>
+                <!-- Champ de confirmation du mot de passe -->
+                <div class="field padding-bottom--24">
+                  <label for="confirm-password">Confirmer le mot de passe</label>
+                  <input type="password" name="confirm-password" required>
+                </div>
+                <!-- Case à cocher pour les conditions -->
+                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                  <label for="agree-terms">
+                    <input type="checkbox" name="agree-terms" required> J'accepte les conditions d'utilisation
+                  </label>
+                </div>
+                <!-- Bouton de soumission du formulaire -->
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="submit" value="S'inscrire">
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Liens du pied de page -->
+          <div class="footer-link padding-top--24">
+            <span>Vous avez déjà un compte ? <a href="index.html">Connectez-vous</a></span>
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+              <span><a href="#">© Alldoem</a></span>
+              <span><a href="#">Contact</a></span>
+              <span><a href="#">Confidentialité et conditions d'utilisation</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <form id="registrationForm">
-    <div class="mb-3">
-      <label for="fullName" class="form-label">Nom et Prénom</label>
-      <input type="text" class="form-control" id="fullName" name="fullName" required>
-    </div>
-    <div class="mb-3">
-      <label for="emailOrNumber" class="form-label">Adresse mail ou Numéro</label>
-      <input type="text" class="form-control" id="emailOrNumber" name="emailOrNumber" required>
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Mot de passe</label>
-      <input type="password" class="form-control" id="password" name="password" required>
-    </div>
-    <div class="mb-3">
-      <label for="confirmPassword" class="form-label">Re-taper le mot de passe</label>
-      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="acceptConditions" required>
-      <label class="form-check-label" for="acceptConditions">J'accepte les conditions</label>
-    </div>
-    <!-- Ajout des classes personnalisées pour le bouton -->
-    <button type="submit" class="btn btn-danger btn-inscrire">S'inscrire</button>
-  </form>
-  <div class="text-center mt-3">
-    <button type="button" class="btn btn-link">Se connecter</button>
-  </div>
-</div>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Custom JavaScript -->
-<script>
-  document.getElementById("registrationForm").addEventListener("submit", function(event) {
-    // Ajoutez votre logique de validation de formulaire ici
-    // Par exemple, empêchez la soumission du formulaire si la validation échoue
-    // event.preventDefault();
-  });
-</script>
-
 </body>
 </html>
+
